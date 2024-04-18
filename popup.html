@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      padding: 10px;
+      color: #333;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+    h1 {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 15px;
+      margin-top: 0px;
+      text-wrap: nowrap;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+      text-wrap: nowrap;
+    }
+    input[type="checkbox"] {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #a0c3ff;
+    }
+    button:hover:not(:disabled) {
+      background-color: #3079ed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Twitter DM Downloader</h1>
+  <button id="downloadBtn">Download Transcript</button>
+  <script src="popup.js"></script>
+</body>
+</html>
