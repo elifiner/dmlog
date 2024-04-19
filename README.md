@@ -1,6 +1,6 @@
-# PoeLog
+# DMLog
 
-PoeLog is a simple Chrome extension that allows you to download a full transcript of your conversation with an AI bot on poe.com. It's particularly useful for capturing long-running conversations that you may want to use as a source of data for other purposes. With the new update, you can now choose to include either just the human, just the bot, or both parties' messages in the transcript.
+DMLog is a simple Chrome extension that allows you to download a full transcript of your Twitter DM conversations. This tool is ideal for archiving conversations or using them as a source of data for AI analysis.
 
 ## Installation
 
@@ -11,20 +11,19 @@ PoeLog is a simple Chrome extension that allows you to download a full transcrip
 
 ## Usage
 
-1. Navigate to poe.com and start a conversation with an AI bot.
-2. Once you've completed the conversation you want to save, click the PoeLog extension icon in the Chrome toolbar.
-3. In the popup that appears, use the checkboxes to select whether you want to include messages from the human, the bot, or both in the transcript.
-4. Click the "Download" button. The extension will generate a text file containing the selected transcript of your conversation and automatically download it to your default downloads location.
+1. Navigate to Twitter and open your DMs.
+2. Click the DMLog extension icon in the Chrome toolbar when you are viewing the conversation you want to save.
+3. Click the "Download" button in the popup. The extension will automatically generate a text file containing a transcript of the entire conversation and download it to your default downloads location.
 
 ## Notes
 
-- PoeLog relies on specific CSS classes used by poe.com to identify the conversation elements. If the website's structure changes, the extension may need to be updated accordingly.
-- PoeLog does not send any data to external servers. All processing is done locally within the Chrome browser.
+- DMLog relies on specific CSS classes used by Twitter to identify the conversation elements. If Twitter's site structure changes, the extension may require updates.
+- DMLog does not send any data to external servers. All processing is done locally within the Chrome browser.
 
 ## Contributing
 
-If you'd like to contribute to PoeLog, suggest new features, or report any issues, please visit the [GitHub repository](https://github.com/elifiner/poelog).
+If you'd like to contribute to DMLog, suggest new features, or report any issues, please visit the [GitHub repository](https://github.com/elifiner/dmlog).
 
 ## License
 
-PoeLog is released under the [MIT License](https://opensource.org/licenses/MIT).
+DMLog is released under the [MIT License](https://opensource.org/licenses/MIT).

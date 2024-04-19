@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DMLog",
   "version": "1.0",
-  "description": "Download entire conversation from Twitter DMs",
+  "description": "Download an entire Twitter DM conversation",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"

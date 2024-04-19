@@ -4,13 +4,29 @@ async function getTranscript() {
       let retryCount = 0;
       let allMessages = [];
 
+      const outgoing = document.querySelector('[aria-label="Account menu"]').querySelector('img').getAttribute('alt');
+      const incoming = document.querySelector('h2#detail-header').textContent;
+
+      function sanitize(s) {
+        return s.replace(/[^\w]/g, '_');
+      }
+
       function scrollAndCapture() {
           const messages = [...document.querySelectorAll('[data-testid="messageEntry"]:not([data-grabbed="true"])')];
           messages.reverse();
           // Capture messages from bottom to top to maintain order
           messages.forEach(msg => {
               msg.setAttribute('data-grabbed', 'true'); // Mark the message as grabbed
-              allMessages.unshift(msg.innerText);
+              const p = msg.querySelector('[role=presentation]');
+              let direction = "LINK";
+              if (p) {
+                  direction = incoming;
+                  const color = window.getComputedStyle(p).getPropertyValue('background-color');
+                  if (color === "rgb(29, 155, 240)") {
+                    direction = outgoing;
+                  }
+              }
+              allMessages.unshift(direction + ": " + msg.innerText);
           });
 
           // Scroll to the oldest message in the current view
@@ -34,7 +50,10 @@ async function getTranscript() {
               if (!oldestMessageReached) {
                   scrollAndCapture();
               } else {
-                  resolve({filename: 'messages.txt', text: allMessages.join("\n")});
+                  resolve({
+                    filename: `${sanitize(outgoing)}-${sanitize(incoming)}.txt`,
+                    text: allMessages.join("\n\n")
+                  });
               }
           }, 500); // Adjust timing based on network speed and typical load times
       }
